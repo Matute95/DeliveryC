@@ -13,7 +13,7 @@ const Cart = () => {
   const totalAmount = useSelector((state) => state.cart.totalAmount);
   return (
     <Helmet title="Cart">
-      <CommonSection title="Your Cart" />
+      <CommonSection title="Carrito" />
       <section>
         <Container>
           <Row>

@@ -42,7 +42,7 @@ const AllFoods = () => {
 
   return (
     <Helmet title="All-Foods">
-      <CommonSection title="All Foods" />
+      <CommonSection title="Productos" />
 
       <section>
         <Container>
@@ -51,7 +51,7 @@ const AllFoods = () => {
               <div className="search__widget d-flex align-items-center justify-content-between ">
                 <input
                   type="text"
-                  placeholder="I'm looking for...."
+                  placeholder="Que buscas?"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -64,10 +64,10 @@ const AllFoods = () => {
               <div className="sorting__widget text-end">
                 <select className="w-50">
                   <option>Default</option>
-                  <option value="ascending">Alphabetically, A-Z</option>
-                  <option value="descending">Alphabetically, Z-A</option>
-                  <option value="high-price">High Price</option>
-                  <option value="low-price">Low Price</option>
+                  <option value="ascending">Ascendente, A-Z</option>
+                  <option value="descending">Descendente, Z-A</option>
+                  <option value="high-price">Ascendentes, Bs</option>
+                  <option value="low-price">Descendente, Bs</option>
                 </select>
               </div>
             </Col>
