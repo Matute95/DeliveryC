@@ -1,7 +1,7 @@
 {
   "background_color": "#ffffff",
   "categories": ["food", "shop"],
-  "description": "Tienda de comida con PWA",
+  "description": "Tienda online con PWA",
   "dir": "ltr",
   "display_override": ["standalone", "fullscreen"],
   "display": "standalone",
