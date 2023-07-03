@@ -108,7 +108,7 @@ const Header = () => {
                   {item.display}
                 </NavLink>
               ))}
-              {
+              {isReadyForInstall && 
               <button className="addTOCart__btn" style={{height: "40px"}} onClick={downloadApp}>
                 <h6>Instalar App</h6>
               </button>}
