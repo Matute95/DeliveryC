@@ -39,29 +39,16 @@ const Header = () => {
   const toggleCart = () => {
     dispatch(cartUiActions.toggle());
   };
-  const [isReadyForInstall, setIsReadyForInstall] = useState(false);
-
-  useEffect(() => {
+  const [isReadyForInstall, setIsReadyForInstall] = React.useState(false);
+  React.useEffect(() => {
     window.addEventListener("beforeinstallprompt", (event) => {
       // Prevent the mini-infobar from appearing on mobile.
-      event.preventDefault();
+      //event.preventDefault();
       console.log("👍", "beforeinstallprompt", event);
       // Stash the event so it can be triggered later.
       window.deferredPrompt = event;
       // Remove the 'hidden' class from the install button container.
       setIsReadyForInstall(true);
-      window.addEventListener("scroll", () => {
-        if (
-          document.body.scrollTop > 80 ||
-          document.documentElement.scrollTop > 80
-        ) {
-          headerRef.current.classList.add("header__shrink");
-        } else {
-          headerRef.current.classList.remove("header__shrink");
-        }
-      });
-  
-      return () => window.removeEventListener("scroll");
     });
   }, []);
 
