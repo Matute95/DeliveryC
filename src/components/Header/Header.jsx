@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 
 import { Container } from "reactstrap";
 import logo from "../../assets/images/res-logo.png";
